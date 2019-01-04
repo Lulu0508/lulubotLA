@@ -438,7 +438,7 @@ function cmd_restart(msg, args) {
     let restartchannel = msg.channel
     if(msg.author.id == config.owner) {
         client.destroy()  
-        .then(client.login(config.token))
+        .then(client.login(process.env.token))
         msg.channel.send(`Restart...`)
         client.on("ready", async () => restartchannel.send("I'm back!"))
     } else {
@@ -880,4 +880,4 @@ client.on('voiceStateUpdate', (mold, mnew) => {
       }
     }) 
 
-client.login(config.token)
+client.login(process.env.token)
