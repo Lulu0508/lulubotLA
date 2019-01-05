@@ -278,7 +278,7 @@ function cmd_userinfo(msg, args){
         let embed = new Discord.RichEmbed()
 
 
-        .setColor(target.highestRole.color || msg.vars.embedRandom)
+        .setColor(target.highestRole.color || "#12e53c")
         .setTimestamp()
         .setTitle(`Userinfo about: ${target.user.username}`, true)
         .addField(`Username + Usertag:`, `**${target.user.username}**#${target.user.discriminator}`, true)
