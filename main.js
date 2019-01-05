@@ -800,4 +800,4 @@ client.on('voiceStateUpdate', (mold, mnew) => {
       }
     }) 
 
-client.login(prpcess.env.token)
+client.login(process.env.token)
