@@ -7,6 +7,18 @@
     "kiara":      "198723874605629440",
     "fruit":      "😃",
     "passes" : 1,
-    "giphy_key": "jsDl0dDrKFUnm5c3ylOCQLmKwZtr5QyF"
+    "giphy_key": "jsDl0dDrKFUnm5c3ylOCQLmKwZtr5QyF",
+     "Activitytypes": {
+        "0": "Playing",
+        "1": "Streaming",
+        "2": "Listening to",
+        "3": "Watching"
+    },
+
+    "Usertypes": {
+        "online": "<:online:507524731927396380> Online",
+        "idle": "<:idle:507524745378398210> Idle",
+        "dnd": "<:dnd:507524739582001178> Do Not Disturb",
+        "offline": "<:offline:507524756627652613> Offline"
 
 }
