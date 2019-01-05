@@ -4,6 +4,7 @@ const Embeds  = require('./embed')
 const superagent = require('./giveaway.js')
 const Giveaway = require('.')
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
+const Version = "Beta 3.0.9"
 
 var client = new Discord.Client()
 
@@ -18,7 +19,7 @@ client.on("ready", () => {
 
     console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
    
-    client.user.setActivity(`#help | [Beta 3.0.9] Auf ${client.guilds.size} Servern!`)
+    client.user.setActivity(`#help | [${Version}] Auf ${client.guilds.size} Servern!`)
     // #help | Auf ${client.guilds.size} Servern(Beta 2.2.0)
     client.user.setStatus("online")
     let Embed = new Discord.RichEmbed()
@@ -47,7 +48,7 @@ var cmdmap = {
     zelda:             cmd_zelda,
     mario:             cmd_mario,
     fortnite:          cmd_fortnite,
-    nv:                cmd_nv,
+    version:           cmd_nv,
     alter:             cmd_alter,
     kick:              cmd_kick,
     emojiliste:        cmd_emojiliste,
@@ -365,7 +366,7 @@ function cmd_restart(msg, args) {
     let restartchannel = msg.channel
     if(msg.author.id == config.owner) {
         client.destroy()  
-        .then(client.login(config.token))
+        .then(client.login(process.env.token))
         msg.channel.send(`Restart...`)
         client.on("ready", async () => restartchannel.send("I'm back!"))
     } else {
@@ -800,4 +801,4 @@ client.on('voiceStateUpdate', (mold, mnew) => {
       }
     }) 
 
-client.login(config.token)
+client.login(prpcess.env.token)
