@@ -3,7 +3,7 @@ const fs      = require('fs')
 const Embeds  = require('./embed')
 const superagent = require('./giveaway.js')
 const Giveaway = require('.')
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
+const config = require("./config.json")
 const Version = "Beta 3.3.0"
 const moment = require("moment")
 
