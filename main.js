@@ -4,7 +4,7 @@ const Embeds  = require('./embed')
 const superagent = require('./giveaway.js')
 const Giveaway = require('.')
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
-const Version = "Beta 3.0.9"
+const Version = "Beta 3.3.0"
 
 var client = new Discord.Client()
 
