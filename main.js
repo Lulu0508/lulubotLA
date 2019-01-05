@@ -40,7 +40,6 @@ var cmdmap = {
     botinfo:           cmd_botinfo,
     help:              cmd_help,
     justine:           cmd_justine,
-    stop:              cmd_stop,
     CreepyPastaKiara1: cmd_kiara1,
     CreepyPastaKiara:  cmd_kiara,  
     botinvite:         cmd_botinvite,
