@@ -5,6 +5,7 @@ const superagent = require('./giveaway.js')
 const Giveaway = require('.')
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
 const Version = "Beta 3.3.0"
+const moment = require("moment")
 
 var client = new Discord.Client()
 
